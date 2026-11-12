@@ -24,8 +24,9 @@
 12. [Repository layout](#repository-layout)
 13. [Deployment](#deployment)
 14. [Reproducing every number and image](#reproducing-every-number-and-image)
-15. [Roadmap](#roadmap)
-16. [Credits and licence](#credits-and-licence)
+15. [Explainer video](#explainer-video)
+16. [Roadmap](#roadmap)
+17. [Credits and licence](#credits-and-licence)
 
 ---
 
@@ -282,7 +283,9 @@ pramana/
 ├── scripts/
 │   ├── make_screenshots.py  regenerates every image from real runs
 │   └── smoke_test.py        post-deployment check
+├── video/                 Remotion source of the explainer video
 └── docs/
+    ├── video/             pramana_explainer.mp4
     ├── SCHEMA.md
     ├── results/           fuzz.json, discretion_sweep.json and text output
     └── screenshots/       images used in this README
@@ -303,6 +306,10 @@ python scripts/make_screenshots.py          # needs google-chrome or chromium on
 ```
 
 Screenshots are photographs of the real captured output of the real commands (terminal views) or charts drawn from the JSON files above. Nothing is mocked. Seeds are fixed, so figures are identical on every run.
+
+## Explainer video
+
+A 56 second self-explanatory walkthrough (the 4:00 pm and 5:00 pm problem, the two regimes, the three requirements, tamper evidence, the failure rates and the discretion curves) is at [`docs/video/pramana_explainer.mp4`](docs/video/pramana_explainer.mp4). It is built with Remotion from the same JSON results as the charts; the source is in [`video/`](video/) (`cd video && npm install && npm run render`, which needs Chrome and writes to `docs/video/`).
 
 ## Roadmap
 
