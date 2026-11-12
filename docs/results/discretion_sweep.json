@@ -1,0 +1,171 @@
+{
+  "ungated": [
+    {
+      "edge_clauses": 0,
+      "raw_mean": 0.0,
+      "raw_sd": 0.0,
+      "resolved_mean": 0.0,
+      "resolved_sd": 0.0,
+      "applicable_mean": 1.0
+    },
+    {
+      "edge_clauses": 4,
+      "raw_mean": 0.48475,
+      "raw_sd": 0.21175590310543882,
+      "resolved_mean": 0.049,
+      "resolved_sd": 0.06504517660826205,
+      "applicable_mean": 1.766375
+    },
+    {
+      "edge_clauses": 8,
+      "raw_mean": 0.743,
+      "raw_sd": 0.2015093049960721,
+      "resolved_mean": 0.15175,
+      "resolved_sd": 0.14411605566348254,
+      "applicable_mean": 2.522375
+    },
+    {
+      "edge_clauses": 12,
+      "raw_mean": 0.9075,
+      "raw_sd": 0.17206466807569762,
+      "resolved_mean": 0.36175,
+      "resolved_sd": 0.1602051419274675,
+      "applicable_mean": 3.761375
+    },
+    {
+      "edge_clauses": 16,
+      "raw_mean": 0.936375,
+      "raw_sd": 0.08076383395431398,
+      "resolved_mean": 0.303875,
+      "resolved_sd": 0.11392013375606615,
+      "applicable_mean": 4.13125
+    },
+    {
+      "edge_clauses": 20,
+      "raw_mean": 0.99025,
+      "raw_sd": 0.017300650276795965,
+      "resolved_mean": 0.374,
+      "resolved_sd": 0.07007763551947226,
+      "applicable_mean": 5.324375
+    },
+    {
+      "edge_clauses": 24,
+      "raw_mean": 0.99725,
+      "raw_sd": 0.005857687256929989,
+      "resolved_mean": 0.406375,
+      "resolved_sd": 0.05606065353703967,
+      "applicable_mean": 6.231375
+    },
+    {
+      "edge_clauses": 28,
+      "raw_mean": 0.993625,
+      "raw_sd": 0.011249305534120761,
+      "resolved_mean": 0.421,
+      "resolved_sd": 0.08200381088705573,
+      "applicable_mean": 7.00075
+    },
+    {
+      "edge_clauses": 32,
+      "raw_mean": 0.996375,
+      "raw_sd": 0.012234045733117082,
+      "resolved_mean": 0.424,
+      "resolved_sd": 0.07653185611234056,
+      "applicable_mean": 7.615375
+    },
+    {
+      "edge_clauses": 36,
+      "raw_mean": 0.997125,
+      "raw_sd": 0.008339476902060466,
+      "resolved_mean": 0.462,
+      "resolved_sd": 0.10252926411517836,
+      "applicable_mean": 8.708
+    },
+    {
+      "edge_clauses": 40,
+      "raw_mean": 1.0,
+      "raw_sd": 0.0,
+      "resolved_mean": 0.50775,
+      "resolved_sd": 0.09600423167756722,
+      "applicable_mean": 10.07075
+    }
+  ],
+  "gated": [
+    {
+      "proposed": 0,
+      "accepted_mean": 0,
+      "rejected_share": 0.0,
+      "raw_mean": 0.0,
+      "resolved_mean": 0.0
+    },
+    {
+      "proposed": 4,
+      "accepted_mean": 3.25,
+      "rejected_share": 0.1875,
+      "raw_mean": 0.4215,
+      "resolved_mean": 0.0
+    },
+    {
+      "proposed": 8,
+      "accepted_mean": 5.25,
+      "rejected_share": 0.34375,
+      "raw_mean": 0.589875,
+      "resolved_mean": 0.0
+    },
+    {
+      "proposed": 12,
+      "accepted_mean": 6.6,
+      "rejected_share": 0.45,
+      "raw_mean": 0.64875,
+      "resolved_mean": 0.0
+    },
+    {
+      "proposed": 16,
+      "accepted_mean": 7.35,
+      "rejected_share": 0.540625,
+      "raw_mean": 0.613125,
+      "resolved_mean": 0.0
+    },
+    {
+      "proposed": 20,
+      "accepted_mean": 8.55,
+      "rejected_share": 0.5725,
+      "raw_mean": 0.801125,
+      "resolved_mean": 0.0
+    },
+    {
+      "proposed": 24,
+      "accepted_mean": 9.7,
+      "rejected_share": 0.5958333333333333,
+      "raw_mean": 0.8266249999999999,
+      "resolved_mean": 0.0
+    },
+    {
+      "proposed": 28,
+      "accepted_mean": 11.2,
+      "rejected_share": 0.6,
+      "raw_mean": 0.7925,
+      "resolved_mean": 0.0
+    },
+    {
+      "proposed": 32,
+      "accepted_mean": 11.85,
+      "rejected_share": 0.6296875,
+      "raw_mean": 0.727875,
+      "resolved_mean": 0.0
+    },
+    {
+      "proposed": 36,
+      "accepted_mean": 12.5,
+      "rejected_share": 0.6527777777777778,
+      "raw_mean": 0.8685,
+      "resolved_mean": 0.0
+    },
+    {
+      "proposed": 40,
+      "accepted_mean": 13.35,
+      "rejected_share": 0.66625,
+      "raw_mean": 0.81775,
+      "resolved_mean": 0.0
+    }
+  ]
+}

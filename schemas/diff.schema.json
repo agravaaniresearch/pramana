@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/agravaaniresearch/pramana/schemas/diff.schema.json",
+  "title": "Diff (one amendment)",
+  "description": "A single amendment to one clause of one instrument. The diff never carries its own publication time: the ledger assigns that on appending. effective_from is a claim made by the amendment, and the engine decides what it is worth.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["diff_id", "instrument_id", "op", "clause_id", "authority", "source_ref"],
+  "properties": {
+    "diff_id": { "type": "string", "minLength": 1, "description": "Unique across the ledger." },
+    "instrument_id": { "type": "string", "minLength": 1 },
+    "op": { "enum": ["insert", "replace", "repeal"] },
+    "clause_id": { "type": "string", "minLength": 1, "description": "Dotted identifier, e.g. 1.1. Compared as an opaque string; ordering is natural-numeric." },
+    "authority": { "type": "string", "minLength": 1, "description": "The body that issued the amendment." },
+    "source_ref": { "type": "string", "minLength": 1, "description": "Circular, order or notification number as printed." },
+    "effective_from": { "type": ["string", "null"], "format": "date-time", "description": "Claimed date of effect, with an explicit offset. Under the tora regime it is clipped so it can never precede publication." },
+    "note": { "type": "string" },
+    "clause": { "$ref": "#/$defs/clause" }
+  },
+  "allOf": [
+    { "if": { "properties": { "op": { "enum": ["insert", "replace"] } } },
+      "then": { "required": ["clause"] },
+      "else": { "properties": { "clause": false } } }
+  ],
+  "$defs": {
+    "clause": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text"],
+      "properties": {
+        "text": { "type": "string", "minLength": 1 },
+        "subject": { "type": "string", "description": "What the clause governs, for the discretion probe." },
+        "value": { "type": "string", "description": "What the clause requires on that subject." },
+        "scope": {
+          "type": "object",
+          "description": "Fact attributes the clause applies to. A missing attribute means any value. Empty scope applies to every fact pattern.",
+          "additionalProperties": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

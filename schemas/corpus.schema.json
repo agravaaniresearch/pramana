@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/agravaaniresearch/pramana/schemas/corpus.schema.json",
+  "title": "Synthetic corpus sidecar",
+  "description": "Everything around the ledger that is not itself law: instrument titles, the shadow circulars used to model legacy practice, and fact patterns for the discretion probe. Shadows are deliberately outside the ledger.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["disclaimer", "instruments", "shadows", "facts"],
+  "properties": {
+    "disclaimer": { "type": "string" },
+    "instruments": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["instrument_id", "title", "authority"],
+        "properties": { "instrument_id": { "type": "string" }, "title": { "type": "string" }, "authority": { "type": "string" } }
+      }
+    },
+    "shadows": {
+      "type": "array",
+      "description": "Circulars that were applied by officials but never published. surfaced_at is when one was first applied to someone.",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["surfaced_at", "diff"],
+        "properties": { "surfaced_at": { "type": "string", "format": "date-time" }, "diff": { "$ref": "diff.schema.json" } }
+      }
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label"],
+        "properties": { "label": { "type": "string" } },
+        "additionalProperties": { "type": "string" }
+      }
+    }
+  }
+}
