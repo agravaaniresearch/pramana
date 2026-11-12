@@ -1,0 +1,191 @@
+{
+  "tamper_detection": [
+    {
+      "attack": "edit_text",
+      "trials": 1000,
+      "detected_without_anchor": 1000,
+      "rate_without_anchor": 1.0,
+      "ci_without_anchor": [
+        0.9961731014136096,
+        1.0
+      ],
+      "detected_with_anchor": 1000,
+      "rate_with_anchor": 1.0,
+      "ci_with_anchor": [
+        0.9961731014136096,
+        1.0
+      ]
+    },
+    {
+      "attack": "edit_published_at",
+      "trials": 1000,
+      "detected_without_anchor": 1000,
+      "rate_without_anchor": 1.0,
+      "ci_without_anchor": [
+        0.9961731014136096,
+        1.0
+      ],
+      "detected_with_anchor": 1000,
+      "rate_with_anchor": 1.0,
+      "ci_with_anchor": [
+        0.9961731014136096,
+        1.0
+      ]
+    },
+    {
+      "attack": "delete_middle",
+      "trials": 1000,
+      "detected_without_anchor": 1000,
+      "rate_without_anchor": 1.0,
+      "ci_without_anchor": [
+        0.9961731014136096,
+        1.0
+      ],
+      "detected_with_anchor": 1000,
+      "rate_with_anchor": 1.0,
+      "ci_with_anchor": [
+        0.9961731014136096,
+        1.0
+      ]
+    },
+    {
+      "attack": "swap_adjacent",
+      "trials": 1000,
+      "detected_without_anchor": 1000,
+      "rate_without_anchor": 1.0,
+      "ci_without_anchor": [
+        0.9961731014136096,
+        1.0
+      ],
+      "detected_with_anchor": 1000,
+      "rate_with_anchor": 1.0,
+      "ci_with_anchor": [
+        0.9961731014136096,
+        1.0
+      ]
+    },
+    {
+      "attack": "forge_insert",
+      "trials": 1000,
+      "detected_without_anchor": 1000,
+      "rate_without_anchor": 1.0,
+      "ci_without_anchor": [
+        0.9961731014136096,
+        1.0
+      ],
+      "detected_with_anchor": 1000,
+      "rate_with_anchor": 1.0,
+      "ci_with_anchor": [
+        0.9961731014136096,
+        1.0
+      ]
+    },
+    {
+      "attack": "rewrite_chain",
+      "trials": 1000,
+      "detected_without_anchor": 0,
+      "rate_without_anchor": 0.0,
+      "ci_without_anchor": [
+        0.0,
+        0.003826898586390522
+      ],
+      "detected_with_anchor": 1000,
+      "rate_with_anchor": 1.0,
+      "ci_with_anchor": [
+        0.9961731014136096,
+        1.0
+      ]
+    },
+    {
+      "attack": "truncate_tail",
+      "trials": 1000,
+      "detected_without_anchor": 0,
+      "rate_without_anchor": 0.0,
+      "ci_without_anchor": [
+        0.0,
+        0.003826898586390522
+      ],
+      "detected_with_anchor": 1000,
+      "rate_with_anchor": 1.0,
+      "ci_with_anchor": [
+        0.9961731014136096,
+        1.0
+      ]
+    },
+    {
+      "attack": "backdated_append_rehashed",
+      "trials": 1000,
+      "detected_without_anchor": 1000,
+      "rate_without_anchor": 1.0,
+      "ci_without_anchor": [
+        0.9961731014136096,
+        1.0
+      ],
+      "detected_with_anchor": 1000,
+      "rate_with_anchor": 1.0,
+      "ci_with_anchor": [
+        0.9961731014136096,
+        1.0
+      ]
+    }
+  ],
+  "clock_regression": {
+    "trials": 1000,
+    "rejected": 1000,
+    "rate": 1.0,
+    "ci": [
+      0.9961731014136096,
+      1.0
+    ]
+  },
+  "stability": [
+    {
+      "retro_share": 0.0,
+      "probes": 10764,
+      "tora_changed_after_the_fact": 0,
+      "tora_rate": 0.0,
+      "legacy_changed_after_the_fact": 0,
+      "legacy_rate": 0.0,
+      "legacy_ci": [
+        0.0,
+        0.0003567660207780174
+      ]
+    },
+    {
+      "retro_share": 0.05,
+      "probes": 10788,
+      "tora_changed_after_the_fact": 0,
+      "tora_rate": 0.0,
+      "legacy_changed_after_the_fact": 160,
+      "legacy_rate": 0.014831294030404153,
+      "legacy_ci": [
+        0.012716849795436521,
+        0.017291151804586964
+      ]
+    },
+    {
+      "retro_share": 0.1,
+      "probes": 10788,
+      "tora_changed_after_the_fact": 0,
+      "tora_rate": 0.0,
+      "legacy_changed_after_the_fact": 368,
+      "legacy_rate": 0.03411197626992955,
+      "legacy_ci": [
+        0.030849086077983076,
+        0.03770655321160768
+      ]
+    },
+    {
+      "retro_share": 0.25,
+      "probes": 10800,
+      "tora_changed_after_the_fact": 0,
+      "tora_rate": 0.0,
+      "legacy_changed_after_the_fact": 977,
+      "legacy_rate": 0.09046296296296297,
+      "legacy_ci": [
+        0.08519768010648028,
+        0.09601948990460171
+      ]
+    }
+  ]
+}

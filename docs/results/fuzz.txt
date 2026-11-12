@@ -1,0 +1,19 @@
+Tamper detection, 1000 seeded trials per attack
+attack                        ledger alone   with anchor
+edit_text                           100.0%        100.0%
+edit_published_at                   100.0%        100.0%
+delete_middle                       100.0%        100.0%
+swap_adjacent                       100.0%        100.0%
+forge_insert                        100.0%        100.0%
+rewrite_chain                         0.0%        100.0%
+truncate_tail                         0.0%        100.0%
+backdated_append_rehashed           100.0%        100.0%
+
+Clock regression rejected: 1000/1000
+
+Stability of law judged at a fixed act time, as later amendments arrive
+ backdated share   probes  pramana changed  legacy changed
+              0%    10764                0            0.0%
+              5%    10788                0            1.5%
+             10%    10788                0            3.4%
+             25%    10800                0            9.0%

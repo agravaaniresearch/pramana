@@ -1,0 +1,23 @@
+# systemd unit for running without containers. Adjust paths, then:
+#   sudo cp deploy/pramana.service /etc/systemd/system/ && sudo systemctl enable --now pramana
+[Unit]
+Description=Pramana read-only rules API (synthetic prototype)
+After=network.target
+
+[Service]
+User=pramana
+Group=pramana
+WorkingDirectory=/opt/pramana
+Environment=PORT=8080
+Environment=PRAMANA_LEDGER=/var/lib/pramana/ledger.jsonl
+Environment=PRAMANA_CORPUS=/var/lib/pramana/corpus.json
+ExecStart=/opt/pramana/venv/bin/python -m pramana.server
+Restart=on-failure
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadOnlyPaths=/var/lib/pramana
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
